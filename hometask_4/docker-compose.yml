@@ -1,0 +1,13 @@
+version: '3.7'
+
+services:
+	apache2:
+		build:
+			dockerfile: Dockerfile_apache
+		ports: "8081:8081"
+		restart: always
+	mysqldb:
+		build:
+			dockerfile: Dockerfile_mysql
+		ports: "3306:3306"
+		restart: always

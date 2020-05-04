@@ -1,0 +1,10 @@
+FROM mysql:5.7
+
+MAINTAINER <dimalecnhuk@gmail.com>
+
+ENV MYSQL_DATABASE lenchuk
+ENV MYSQL_USER lenchuk
+ENV MYSQL_PASSWORD userpassword
+ENV MYSQL_ROOT_PASSWORD rootpassword
+
+EXPOSE 3306
