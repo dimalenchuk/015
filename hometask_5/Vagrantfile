@@ -1,0 +1,11 @@
+Vagrant.configure("2") do |config|
+  config.vm.define "ceos" do |ceos|
+    ceos.vm.box = "centos/7"
+    ceos.vm.synced_folder "./Lenchuk", "/home/vagrant/"
+    ceos.vm.network "forwarded_port", guest: 80, host: 8080
+    ceos.vm.provision "shell",
+      inline:
+        "sudo yum update
+        docker-compose up"	
+  end
+end
